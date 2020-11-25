@@ -5,6 +5,8 @@ import input.nodes.Node;
 
 import java.util.ArrayList;
 
+import static input.nodes.readers.NumberReader.readInt;
+
 public class InputReader {
     static int numberOfNodes;
     static int numberOfEvidenceNodes;
@@ -22,6 +24,18 @@ public class InputReader {
     }
 
     private static void readNumberOfNodes() {
+        numberOfNodes = readInt();
+    }
 
+    private static void readNodeParameters() {
+    }
+
+    private static void readNumberOfEvidenceNodes() {
+    }
+
+    private static void readEvidenceNodes() {
+    }
+
+    private static void readGoalNode() {
     }
 }
