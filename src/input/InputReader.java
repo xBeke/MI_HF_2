@@ -22,23 +22,21 @@ public class InputReader {
     }
 
     private static void readNumberOfNodes() {
-        NumberReader reader = new NumberReader();
-        numberOfNodes = reader.readInt();
+        numberOfNodes = NumberReader.readInt();
     }
 
     private static void readNodeParameters() {
         for (int i = 0 ; i < numberOfNodes ; i++){
-            NumberReader reader = new NumberReader();
             Node node = new Node();
 
-            node.setNumberOfValues(reader.readInt());
-            node.setNumberOfParents(reader.readInt());
+            node.setNumberOfValues(NumberReader.readInt());
+            node.setNumberOfParents(NumberReader.readInt());
 
             for (int j = 0 ; j < node.numberOfParents ; j ++){
-                node.parents.add(reader.readInt());
+                node.parents.add(NumberReader.readInt());
             }
 
-            while(reader.consoleScanner.hasNextDouble()){
+            for (int i = 0 ; i <  ; i++) {
                 ArrayList<Double> row = new ArrayList<>();
                 for (int k = 0 ; k < (node.numberOfValues + node.numberOfParents) ; k++){
                     row.add(reader.readDouble());
@@ -47,6 +45,7 @@ public class InputReader {
             }
             nodes.add(node);
         }
+        private int calcNumberOf
     }
 
     private static void readNumberOfEvidenceNodes() {
