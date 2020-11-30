@@ -7,6 +7,7 @@ public class Node {
     public double numberOfParents;
     public ArrayList<Double> parents;
     public ArrayList<ArrayList<Double>> probOfValues;
+    private Integer value;
 
     public Node() {
         this.parents = new ArrayList<>();
@@ -26,5 +27,13 @@ public class Node {
 
     public void setNumberOfParents(double numberOfParents) {
         this.numberOfParents = numberOfParents;
+    }
+
+    public Integer getValue() {
+        return value;
+    }
+
+    public void setValue(Integer value) {
+        this.value = value;
     }
 }
