@@ -1,9 +1,17 @@
 import input.InputReader;
+import input.readers.NumberReader;
 
 public class Main {
     public static void main(String[] args) {
-        InputReader.parseInput();
-        write();
+        double a = NumberReader.readDouble();
+        double b = NumberReader.readDouble();
+        double c = NumberReader.readDouble();
+        double d = NumberReader.readDouble();
+
+        System.out.println(a + " " + b + " " + c + " " + d);
+//        InputReader.parseInput();
+//        write();
+
     }
 
     private static void write() {

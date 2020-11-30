@@ -32,20 +32,36 @@ public class InputReader {
             node.setNumberOfValues(NumberReader.readInt());
             node.setNumberOfParents(NumberReader.readInt());
 
-            for (int j = 0 ; j < node.numberOfParents ; j ++){
-                node.parents.add(NumberReader.readInt());
-            }
+//            for (int j = 0 ; j < node.numberOfParents ; j ++){
+//                node.parents.add(NumberReader.readInt());
+//            }
+//            int x = 0;
+//
+//            for ( int j = 0 ; j < productOfParentalPossibleValues(node) ; j++){
+//                ArrayList<Double> row = new ArrayList<>();
+//                for( int k = 0 ; k < node.numberOfParents + node.numberOfValues ; k++){
+//                    row.add(NumberReader.readDouble());
+//                }
+//                node.probOfValues.add(row);
+//            }
 
-            for (int i = 0 ; i <  ; i++) {
-                ArrayList<Double> row = new ArrayList<>();
-                for (int k = 0 ; k < (node.numberOfValues + node.numberOfParents) ; k++){
-                    row.add(reader.readDouble());
-                }
-                node.probOfValues.add(row);
-            }
+//            for (int j = 0 ; j < sumOfPossibleValues  ; j++) {
+//                ArrayList<Double> row = new ArrayList<>();
+//                for (int k = 0 ; k < (node.numberOfValues + node.numberOfParents) ; k++){
+//                    row.add(reader.readDouble());
+//                }
+//                node.probOfValues.add(row);
+//            }
             nodes.add(node);
         }
-        private int calcNumberOf
+    }
+
+    private static int productOfParentalPossibleValues(Node node) {
+        int sum = 0;
+        for (int i = 0 ; i < node.numberOfParents ;i++){
+            sum += nodes.get(i).numberOfValues;
+        }
+        return sum;
     }
 
     private static void readNumberOfEvidenceNodes() {
