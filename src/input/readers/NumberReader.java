@@ -10,7 +10,11 @@ public class NumberReader {
         return consoleScanner.nextDouble();
     }
 
-    public static void parseNode(){
-        System.out.println("Parse node");
+    public static void parseNode(String nodeString){
+        System.out.println("Node " + nodeString);
+    }
+
+    public static void parseEvidenceNode(String nodeString){
+        System.out.println("Evidence node " + nodeString);
     }
 }
