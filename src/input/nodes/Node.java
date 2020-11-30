@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Node {
     public double numberOfValues;
     public double numberOfParents;
-    public ArrayList<Integer> parents;
+    public ArrayList<Double> parents;
     public ArrayList<ArrayList<Double>> probOfValues;
 
     public Node() {
@@ -13,14 +13,14 @@ public class Node {
         this.probOfValues = new ArrayList<>();
     }
 
-    public Node(int numberOfValues, int numberOfParents, ArrayList<Integer> parents, ArrayList<ArrayList<Double>> probOfValues) {
+    public Node(int numberOfValues, int numberOfParents, ArrayList<Double> parents, ArrayList<ArrayList<Double>> probOfValues) {
         this.numberOfValues = numberOfValues;
         this.numberOfParents = numberOfParents;
         this.parents = parents;
         this.probOfValues = probOfValues;
     }
 
-    public void setNumberOfValues(Double numberOfValues) {
+    public void setNumberOfValues(double numberOfValues) {
         this.numberOfValues = numberOfValues;
     }
 
