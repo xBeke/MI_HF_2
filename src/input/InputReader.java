@@ -1,10 +1,14 @@
 package input;
 
+import input.nodes.EvidenceNode;
+import input.nodes.Node;
 import input.readers.NumberReader;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class InputReader {
 
@@ -13,10 +17,12 @@ public class InputReader {
     BufferedReader reader;
     private Integer numberOfNodes;
     private Integer numberOfEvidenceNodes;
+    private List<Node> allNodes;
 
 
     private InputReader() {
         reader = null;
+        allNodes = new ArrayList<>();
     }
 
     public static InputReader getInstance()
@@ -47,13 +53,14 @@ public class InputReader {
 
     private void readEvidenceNodes(Integer numberOfEvidenceNodes) throws IOException {
         for (int i = 0; i < numberOfEvidenceNodes; i++) {
-            NumberReader.parseEvidenceNode(reader.readLine());
+            EvidenceNode evidenceNode = NumberReader.parseEvidenceNode(reader.readLine());
+            this.getAllNodes().get(evidenceNode.getIndex()).setValue(evidenceNode.getValue());
         }
     }
 
     private void readNodes(Integer numberOfNodes) throws IOException {
         for (int i = 0; i < numberOfNodes; i++) {
-            NumberReader.parseNode(reader.readLine());
+            this.getAllNodes().add(NumberReader.parseNode(reader.readLine()));
         }
     }
 
@@ -73,5 +80,9 @@ public class InputReader {
         } catch (IOException ioException) {
             System.out.println(ioException.getMessage());
         }
+    }
+
+    public List<Node> getAllNodes() {
+        return allNodes;
     }
 }
