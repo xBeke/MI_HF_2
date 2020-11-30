@@ -1,20 +1,22 @@
 import input.InputReader;
 import input.readers.NumberReader;
 
+import java.io.*;
 import java.util.ArrayList;
+import java.util.ConcurrentModificationException;
 
 public class Main {
-    public static void main(String[] args) {
-        InputReader.parseInput();
+    public static void main(String[] args) throws IOException {
+        // InputReader.parseInput();
+        teszt();
     }
 
-    private static void teszt() {
-        ArrayList<Double> list = new ArrayList<>();
-        int size = 7;
-            list.add(NumberReader.readDouble());
-        for (int i = 0 ; i < size ;i++){
-            System.out.println(list.get(i));
-        }
+    private static void teszt() throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String str1;
+        str1 = reader.readLine();
+        System.out.println(str1);
+        
     }
 
     private static void write() {

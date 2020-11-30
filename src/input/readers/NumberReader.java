@@ -9,4 +9,8 @@ public class NumberReader {
     public static double readDouble(){
         return consoleScanner.nextDouble();
     }
+
+    public static void parseNode(){
+        System.out.println("Parse node");
+    }
 }
