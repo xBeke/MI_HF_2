@@ -7,7 +7,7 @@ public class Node {
     public double numberOfParents;
     public ArrayList<Double> parents;
     public ArrayList<ArrayList<Double>> probOfValues;
-    private Integer value;
+    private Integer value = null;
 
     public Node() {
         this.parents = new ArrayList<>();
