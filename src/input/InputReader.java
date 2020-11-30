@@ -17,6 +17,7 @@ public class InputReader {
     BufferedReader reader;
     private Integer numberOfNodes;
     private Integer numberOfEvidenceNodes;
+    private Integer goalNodeIndex;
     private List<Node> allNodes;
 
 
@@ -44,6 +45,8 @@ public class InputReader {
             numberOfEvidenceNodes = readSingleIntegerFromLine();
 
             readEvidenceNodes(numberOfEvidenceNodes);
+
+            goalNodeIndex = readSingleIntegerFromLine();
         } catch (IOException ioException) {
             System.out.println(ioException.getMessage());
         } finally {
@@ -84,5 +87,9 @@ public class InputReader {
 
     public List<Node> getAllNodes() {
         return allNodes;
+    }
+
+    public Integer getGoalNodeIndex() {
+        return goalNodeIndex;
     }
 }
