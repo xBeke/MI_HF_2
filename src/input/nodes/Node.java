@@ -3,8 +3,8 @@ package input.nodes;
 import java.util.ArrayList;
 
 public class Node {
-    public int numberOfValues;
-    public int numberOfParents;
+    public double numberOfValues;
+    public double numberOfParents;
     public ArrayList<Integer> parents;
     public ArrayList<ArrayList<Double>> probOfValues;
 
@@ -20,11 +20,11 @@ public class Node {
         this.probOfValues = probOfValues;
     }
 
-    public void setNumberOfValues(int numberOfValues) {
+    public void setNumberOfValues(Double numberOfValues) {
         this.numberOfValues = numberOfValues;
     }
 
-    public void setNumberOfParents(int numberOfParents) {
+    public void setNumberOfParents(double numberOfParents) {
         this.numberOfParents = numberOfParents;
     }
 }

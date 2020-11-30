@@ -1,17 +1,20 @@
 import input.InputReader;
 import input.readers.NumberReader;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        double a = NumberReader.readDouble();
-        double b = NumberReader.readDouble();
-        double c = NumberReader.readDouble();
-        double d = NumberReader.readDouble();
+        InputReader.parseInput();
+    }
 
-        System.out.println(a + " " + b + " " + c + " " + d);
-//        InputReader.parseInput();
-//        write();
-
+    private static void teszt() {
+        ArrayList<Double> list = new ArrayList<>();
+        int size = 7;
+            list.add(NumberReader.readDouble());
+        for (int i = 0 ; i < size ;i++){
+            System.out.println(list.get(i));
+        }
     }
 
     private static void write() {

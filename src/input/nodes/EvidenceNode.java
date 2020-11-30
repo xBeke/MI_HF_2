@@ -1,10 +1,10 @@
 package input.nodes;
 
 public class EvidenceNode {
-    int index;
-    int value;
+    double index;
+    double value;
 
-    public EvidenceNode(int index, int value){
+    public EvidenceNode(double index, double value){
         this.index = index;
         this.value = value;
     }

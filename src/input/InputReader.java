@@ -7,11 +7,11 @@ import input.readers.NumberReader;
 import java.util.ArrayList;
 
 public class InputReader {
-    public static int numberOfNodes;
+    public static double numberOfNodes;
     public static ArrayList<Node> nodes = new ArrayList<>();
-    public static int numberOfEvidenceNodes;
+    public static double numberOfEvidenceNodes;
     public static ArrayList<EvidenceNode> evidenceNodes = new ArrayList<>();
-    public static int goalNode;
+    public static double goalNode;
 
     public static void parseInput(){
         readNumberOfNodes();
@@ -22,15 +22,15 @@ public class InputReader {
     }
 
     private static void readNumberOfNodes() {
-        numberOfNodes = NumberReader.readInt();
+        numberOfNodes = NumberReader.readDouble();
     }
 
     private static void readNodeParameters() {
         for (int i = 0 ; i < numberOfNodes ; i++){
             Node node = new Node();
 
-            node.setNumberOfValues(NumberReader.readInt());
-            node.setNumberOfParents(NumberReader.readInt());
+            node.setNumberOfValues(NumberReader.readDouble());
+            node.setNumberOfParents(NumberReader.readDouble());
 
 //            for (int j = 0 ; j < node.numberOfParents ; j ++){
 //                node.parents.add(NumberReader.readInt());
@@ -66,18 +66,18 @@ public class InputReader {
 
     private static void readNumberOfEvidenceNodes() {
         NumberReader reader = new NumberReader();
-        numberOfEvidenceNodes = reader.readInt();
+        numberOfEvidenceNodes = reader.readDouble();
     }
 
     private static void readEvidenceNodes() {
         for (int i = 0 ; i < numberOfEvidenceNodes ; i++){
             NumberReader reader = new NumberReader();
-            evidenceNodes.add(new EvidenceNode(reader.readInt(), reader.readInt()));
+            evidenceNodes.add(new EvidenceNode(reader.readDouble(), reader.readDouble()));
         }
     }
 
     private static void readGoalNode() {
         NumberReader reader = new NumberReader();
-        goalNode = reader.readInt();
+        goalNode = reader.readDouble();
     }
 }
